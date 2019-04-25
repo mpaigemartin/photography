@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="javascript" href="main.js" />
+    <link rel="stylesheet" href="modal.css" />
+  </head>
+  <body>
+    <!-- Images used to open the lightbox -->
+    <div class="row">
+      <div class="column">
+        <img
+          id="urban"
+          src="./photos/IMG_3719.jpg"
+          onclick="openModal()"
+          class="hover-shadow"
+        />
+      </div>
+      <div class="column">
+        <img
+          id="animals"
+          src="./photos/5-Interior-Photography-Tips-on-Orms-Connect-370x265.jpg"
+          onclick="openModal2()"
+          class="hover-shadow"
+        />
+      </div>
+      <div class="column">
+        <img
+          id="film"
+          src="./photos/AfterlightImage-2.jpg"
+          onclick="openModal3();currentSlide(3)"
+          class="hover-shadow"
+        />
+      </div>
+      <div class="column">
+        <img
+          id="portraits"
+          src="./photos/IMG_3962.jpg"
+          onclick="openModal4();currentSlide(4)"
+          class="hover-shadow"
+        />
+      </div>
+      <div class="column">
+        <img
+          id="engage"
+          src="./photos/20long-island-beach-engagement-session-photographed-by-traverse-the-tides-1100x550.jpg"
+          onclick="openModal5();currentSlide(1)"
+          class="hover-shadow"
+        />
+      </div>
+      <div class="column">
+        <img
+          id="cosplay"
+          src="./photos/Katuscon_021514_Roberto_Blake_DSC_6639.jpg"
+          onclick="openModal6();currentSlide(1)"
+          class="hover-shadow"
+        />
+      </div>
+      <div class="column">
+        <img
+          id="self"
+          src="./photos/AfterlightImage.jpg"
+          onclick="openModal7();currentSlide(1)"
+          class="hover-shadow"
+        />
+      </div>
+      <div class="column">
+        <img
+          id="nature"
+          src="./photos/IMG_5527.jpg"
+          onclick="openModal8();currentSlide(1)"
+          class="hover-shadow"
+        />
+      </div>
+    </div>
+
+    <!-- The Modal/Lightbox -->
+    <div id="myModal" class="modal">
+      <span class="close cursor" onclick="closeModal()">&times;</span>
+      <div class="modal-content">
+        <div class="mySlides">
+          <div class="numbertext">1 / 4</div>
+          <img src="./photos/IMG_3719.jpg" style="width:100%" />
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">2 / 4</div>
+          <img
+            id="ponce"
+            src="./photos/graffiti_decatur.jpg"
+            style="width:100%"
+          />
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">3 / 4</div>
+          <img
+            src="./photos/41961953_10215790020559942_9127344638359764992_o.jpg"
+            style="width:100%"
+          />
+        </div>
+
+        <!-- Next/previous controls -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <!-- Caption text -->
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+
+        <!-- Thumbnail image controls -->
+        <div class="column">
+          <img
+            class="demo"
+            src="./photos/IMG_3719.jpg"
+            onclick="currentSlide(1)"
+            alt="Nature"
+          />
+        </div>
+
+        <div class="column">
+          <img
+            class="demo"
+            src="./photos/38612291_10215470102882200_2904045740667961344_o.jpg"
+            onclick="currentSlide(2)"
+            alt="Snow"
+          />
+        </div>
+
+        <div class="column">
+          <img
+            class="demo"
+            src="./photos/38670970_10215472776589041_6897103941297766400_o.jpg"
+            onclick="currentSlide(3)"
+            alt="Mountains"
+          />
+        </div>
+
+        <div class="column">
+          <img
+            class="demo"
+            src="./photos/41961953_10215790020559942_9127344638359764992_o.jpg"
+            onclick="currentSlide(4)"
+            alt="Lights"
+          />
+        </div>
+      </div>
+    </div>
+    <div id="myModal2" class="modal">
+      <span class="close cursor" onclick="closeModal()">&times;</span>
+      <div class="modal-content">
+        <div class="mySlides">
+          <div class="numbertext">1 / 4</div>
+          <img src="./photos/AfterlightImage.jpg" style="width:100%" />
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">2 / 4</div>
+          <img
+            src="./photos/https___cdn.evbuc.com_images_54583545_261923870036_1_original.jpeg"
+            style="width:100%"
+          />
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">3 / 4</div>
+          <img
+            src="./photos/20long-island-beach-engagement-session-photographed-by-traverse-the-tides-1100x550.jpg"
+            style="width:100%"
+          />
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">4 / 4</div>
+          <img src="./photos/IMG_5527.jpg" style="width:100%" />
+        </div>
+
+        <!-- Next/previous controls -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <!-- Caption text -->
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+
+        <!-- Thumbnail image controls -->
+        <div class="column">
+          <img
+            class="demo"
+            src="img1.jpg"
+            onclick="currentSlide(1)"
+            alt="nature"
+          />
+        </div>
+
+        <div class="column">
+          <img
+            class="demo"
+            src="img2.jpg"
+            onclick="currentSlide(2)"
+            alt="Snow"
+          />
+        </div>
+
+        <div class="column">
+          <img
+            class="demo"
+            src="img3.jpg"
+            onclick="currentSlide(3)"
+            alt="Mountains"
+          />
+        </div>
+
+        <div class="column">
+          <img
+            class="demo"
+            src="img4.jpg"
+            onclick="currentSlide(4)"
+            alt="Lights"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    function openModal() {
+      document.getElementById("myModal").style.display = "block";
+    }
+    function openModal2() {
+      document.getElementById("myModal2").style.display = "block";
+    }
+    function openModal3() {
+      document.getElementById("myModal3").style.display = "block";
+    }
+    function openModal4() {
+      document.getElementById("myModal4").style.display = "block";
+    }
+    function openModal5() {
+      document.getElementById("myModal5").style.display = "block";
+    }
+    function openModal6() {
+      document.getElementById("myModal6").style.display = "block";
+    }
+    function openModal7() {
+      document.getElementById("myModal7").style.display = "block";
+    }
+    function openModal8() {
+      document.getElementById("myModal8").style.display = "block";
+    }
+
+    // Close the Modal
+    function closeModal() {
+      document.getElementById("myModal").style.display = "none";
+    }
+
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+      showSlides((slideIndex += n));
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+      showSlides((slideIndex = n));
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) {
+        slideIndex = 1;
+      }
+      if (n < 1) {
+        slideIndex = slides.length;
+      }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+      captionText.innerHTML = dots[slideIndex - 1].alt;
+    }
+  </script>
+</html>
